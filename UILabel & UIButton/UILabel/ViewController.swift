@@ -14,7 +14,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         // ADDING A LABEL PROGRAMATICALLY
         label.text = "This is cool stuff, making a Label from lines of codes"
@@ -36,12 +35,6 @@ class ViewController: UIViewController {
     @objc func buttonAction(_ sender: UIButton) {
          label.text = "Button successfully connected!"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

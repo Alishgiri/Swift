@@ -40,10 +40,6 @@ class ViewController: UIViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     @IBAction func changeBackgroundColor(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:

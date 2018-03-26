@@ -34,10 +34,6 @@ class ViewController: UIViewController {
         textfield2.enablesReturnKeyAutomatically = true
         textfield2.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     @IBAction func pressButton(_ sender: UIButton) {
          shouldEditTextField = !shouldEditTextField

@@ -15,13 +15,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
         let outerWidth = self.view.frame.width
         self.view.backgroundColor = UIColor.purple
         
         // FRAME CHANGES SIZE AND POSITION TO FIT ITS PARENT
-//        middleView.frame = CGRect(x: 0, y: 0, width: outerWidth, height: outerWidth)
+        // middleView.frame = CGRect(x: 0, y: 0, width: outerWidth, height: outerWidth)
         
         // BOUNDS CHANGES THE SIZE AND POSITION OF THE CHILD VIEW (SUBVIEW) IT BEARS
         middleView.bounds = CGRect(x: 0, y: -outerWidth/2, width: outerWidth, height: outerWidth)
@@ -55,11 +54,6 @@ class ViewController: UIViewController {
             self.view.backgroundColor = UIColor.purple
         }
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
