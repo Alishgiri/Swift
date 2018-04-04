@@ -33,7 +33,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         let uilongPressGR = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.longPress(gestureRecognizer:))) // COLON AT THE END OF THE longPress: sends where the long press is
         uilongPressGR.minimumPressDuration = 2
-        
         map.addGestureRecognizer(uilongPressGR)
     }
     
