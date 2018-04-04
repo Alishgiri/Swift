@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var player = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +26,19 @@ class ViewController: UIViewController {
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        
+        let sounds = [1, 2, 3, 4]
+        let randomSound = Int(arc4random_uniform(5) - 1)
+        
         if event?.subtype == UIEventSubtype.motionShake {
-            print("Device was shaken")
+            let fileLocation = Bundle.main.path(forResource: "\(sounds[randomSound])", ofType: "mp3")
+            
+            do {
+                try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: fileLocation!))
+                player.play()
+            } catch let error {
+                print(error)
+            }
         }
     }
     
