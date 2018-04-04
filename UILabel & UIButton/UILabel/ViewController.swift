@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // ADDING A LABEL PROGRAMATICALLY
-        label.text = "This is cool stuff, making a Label from lines of codes"
+        label.text = "Making a Label from lines of codes below"
         label.font = UIFont(name: "verdana", size: 20)
         label.numberOfLines = 5
         label.backgroundColor = UIColor.gray
