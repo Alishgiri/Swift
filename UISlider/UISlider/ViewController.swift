@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         redSlider.frame = CGRect(x: 20, y: 40, width: 280, height: 62)
         redSlider.setValue(50, animated: true)
         redSlider.maximumValue = 100
-        
+
         blueSlider.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi * 1.5))*/
         
         alphaSlider = UISlider(frame: CGRect(x: 20, y: 350, width: 280, height: 31))
@@ -71,5 +71,6 @@ class ViewController: UIViewController {
             self.view.backgroundColor = UIColor.red
         }
     }
+    
 }
 
