@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // BRINGS UP THE OPTION TO select, BIU (Bold Italic and underline), paste, etc
         textField1.allowsEditingTextAttributes = true
         
