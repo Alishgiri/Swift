@@ -22,15 +22,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let lonDelta: CLLocationDegrees = 0.05
         let span = MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
         let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let region = MKCoordinateRegion(center: coordinates, span: span)
-        
+        let region = MKCoordinateRegion(center: coordinates, span: span) 
         map.setRegion(region, animated: true)
         
         let annotation = MKPointAnnotation()
         annotation.title = "Taj Mahal"
         annotation.subtitle = "One I will see it"
         annotation.coordinate = coordinates
-        
         map.addAnnotation(annotation)
         
         let uilongPressGR = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.longPress(gestureRecognizer:))) // COLON AT THE END OF THE longPress: sends where the long press is
