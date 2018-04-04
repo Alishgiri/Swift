@@ -132,6 +132,7 @@ class ViewController: UIViewController {
             print("Action sheet is being displayed")
         })
         
+        
 //        THE BELOW CODE IS LIKE setTimeout IN ANGULAR
         let delay = DispatchTime.now() + 3 // THIS 3 IS ADD 3 SECOND TO THE NOW TIME
         DispatchQueue.main.asyncAfter(deadline: delay, execute: {() -> Void in
