@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         case park = "Parked and not moving"
         case reverse = "Moving Backwards"
     }
+    
     var selectedGear: Gear = .park
     
     override func viewDidLoad() {
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
         segmentedControl3.insertSegment(withTitle: "c", at: 2, animated: true)
         segmentedControl3.setTitle("AA", forSegmentAt: 0)
         self.view.addSubview(segmentedControl3)
-        
+
     }
 
     @IBAction func changeBackgroundColor(_ sender: UISegmentedControl) {
