@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var songTimerSliderOutlet: UISlider!
     @IBOutlet weak var volumeSliderOutlet: UISlider!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -30,10 +29,6 @@ class ViewController: UIViewController {
                 print("Error while playing!\n\(error)")
         }
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     @IBAction func songTimerControllerAction(_ sender: UISlider) {
@@ -72,6 +67,10 @@ class ViewController: UIViewController {
 //        } catch let error {
 //            print("Error while playing!\n\(error)")
 //        }
+    }
+    
+        override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
 }
