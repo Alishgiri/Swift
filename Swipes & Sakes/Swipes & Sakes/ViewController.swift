@@ -37,7 +37,7 @@ class ViewController: UIViewController {
                 try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: fileLocation!))
                 player.play()
             } catch let error {
-                print(error)
+                print("Failed to play: " error)
             }
         }
     }
