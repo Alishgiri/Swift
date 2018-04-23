@@ -1,0 +1,6 @@
+1. GOTO developer.facebook.com AND DOWNLOAD THE FACEBOOK SDK
+2. MAKE A FOLDER Frameworks(which is alredy done here) and add 
+    - Bolts.Framework
+    - FBSDKCoreKit.framework
+    - FBSDKLoginKit.framework
+    FROM THE SDK YOU HAVE DOWNLOADED AND FOLLOW THE STEPS.
