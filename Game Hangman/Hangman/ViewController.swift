@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btnNewWordOutlet: UIButton!
     
     let LIST_OF_WORDS = ["hello", "goodbye", "mammoth", "grapes", "coffee"]
-    let LIST_OF_HINTS = ["greeting", "farewell", "extinct mastadon", "fruit vine", "a good start of the day"]
+    let LIST_OF_HINTS = ["Greeting", "Farewell", "Extinct mastadon", "Fruit vine", "A good start of the day"]
     var wordToGuess: String!
     var wordAsUnderscores: String = ""
     let MAX_NUMBER_OF_GUESSES = 5
@@ -67,6 +67,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         let hint = LIST_OF_HINTS[index]
         hintLabel.text = "Hint: \(hint), \(wordToGuess.count) letters"
+        hintLabel.font = UIFont(name: "Gill Sans", size: 19)
     }
     
     func chooseRandomNumber() -> Int {
@@ -82,6 +83,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func reset() {
         guessesRemaining = MAX_NUMBER_OF_GUESSES
         remainingGuessLabel.text = "\(guessesRemaining!) guesses left."
+        remainingGuessLabel.font = UIFont(name: "Gill Sans", size: 22)
+        hintLabel.font = UIFont(name: "Gill Sans", size: 19)
         wordAsUnderscores = ""
         inputTextField.text?.removeAll()
         letterBankLabel.text?.removeAll()
@@ -141,6 +144,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         inputTextField.text?.removeAll()
         let currentLetterBank = letterBankLabel.text ?? ""
         if currentLetterBank.contains(letterGuessed) {
+            showAlert(title: "Letter already guessed!", message: "Keep an eye in the letter bank below!")
             return
         } else {
             if wordToGuess.contains(letterGuessed) {
@@ -163,20 +167,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
         if (!wordAsUnderscores.contains("_")) {
+            inputTextField.isEnabled = false
             remainingGuessLabel.text = "You win! :)"
             hintLabel.text = "WOOHOOO!!!"
-            inputTextField.isEnabled = false
+            hintLabel.font = UIFont(name: "Gill Sans", size: 40)
+            remainingGuessLabel.font = UIFont(name: "Gill Sans", size: 40)
         }
     }
     
     func processIncorrectGuess() {
         guessesRemaining! -= 1
         if guessesRemaining == 0 {
-            remainingGuessLabel.text = "You lose! :("
             inputTextField.isEnabled = false
+            remainingGuessLabel.text = "You lose! :("
+            hintLabel.text = "OPPSS!!"
+            remainingGuessLabel.font = UIFont(name: "Gill Sans", size: 40)
+            hintLabel.font = UIFont(name: "Gill Sans", size: 40)
         } else {
             remainingGuessLabel.text = "\(guessesRemaining!) guesses left"
         }
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertViewController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        alertViewController.addAction(okAction)
+        present(alertViewController, animated: true, completion: nil)
     }
     
 }
