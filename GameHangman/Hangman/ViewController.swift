@@ -40,8 +40,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         inputTextField.isEnabled = false
         
         if inputTextField.isEnabled == false {
-            btnNewWordOutlet.setTitle("Click Here To Start", for: [])
-            inputTextField.placeholder = "Click on top to start!"
+            btnNewWordOutlet.setTitle("Click Here To Play", for: [])
+            wordToGuessLabel.alpha = 0
+            remainingGuessLabel.alpha = 0
+            letterBankLabel.alpha = 0
+            inputTextField.alpha = 0
+            hintLabel.alpha = 0
         }
     }
     
@@ -68,6 +72,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let hint = LIST_OF_HINTS[index]
         hintLabel.text = "Hint: \(hint), \(wordToGuess.count) letters"
         hintLabel.font = UIFont(name: "Gill Sans", size: 19)
+        
+        wordToGuessLabel.alpha = 1
+        remainingGuessLabel.alpha = 1
+        letterBankLabel.alpha = 1
+        inputTextField.alpha = 1
+        hintLabel.alpha = 1
     }
     
     func chooseRandomNumber() -> Int {
