@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonAction(_ sender: UIButton) {
-         label.text = "Button successfully connected!"
+         label.text = "Button Successfully Connected!"
     }
 
 }
