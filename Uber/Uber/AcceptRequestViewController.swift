@@ -27,9 +27,11 @@ class AcceptRequestViewController: UIViewController {
         annotation.coordinate = requestLocation
         annotation.title = requestEmail
         map.addAnnotation(annotation)
+        
     }
 
     @IBAction func btnAcceptRequest(_ sender: UIButton) {
+
         // Update the ride request
         Database.database().reference().child("RideRequests").queryOrdered(byChild: "email").queryEqual(toValue: requestEmail).observe(.childAdded) { (snapshot) in
             snapshot.ref.updateChildValues(["driverLat": self.driverLocation.latitude, "driverLon": self.driverLocation.longitude])
@@ -49,6 +51,8 @@ class AcceptRequestViewController: UIViewController {
                 }
             }
         }
+
     }
+
     
 }

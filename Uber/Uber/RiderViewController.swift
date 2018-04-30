@@ -144,4 +144,5 @@ class RiderViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
+    
 }
