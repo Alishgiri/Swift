@@ -12,15 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var buttonOutlet: UIButton!
+
     var counter = 0
     var isAnimating = false
     var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     @IBAction func fadeIn(_ sender: UIButton) {
@@ -41,7 +39,6 @@ class ViewController: UIViewController {
             self.image.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
         }
     }
-    
     
     @IBAction func next(_ sender: UIButton) {
         if isAnimating {
