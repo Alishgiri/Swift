@@ -69,10 +69,6 @@ class ViewController: UIViewController {
             print("Could not fetch data!")
         }
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 
 
 }
