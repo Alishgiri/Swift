@@ -31,10 +31,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.cityTextField.resignFirstResponder()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowedCharacters = NSCharacterSet.letters
         let spaceCharacter = NSCharacterSet(charactersIn: " ")
