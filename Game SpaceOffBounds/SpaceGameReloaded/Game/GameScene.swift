@@ -178,7 +178,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     
-    /*
+    
+ /*
  let RedBallCategory  : UInt32 = 0x1 << 1
  let GreenBallCategory: UInt32 = 0x1 << 2
  let RedBarCategory : UInt32 = 0x1 << 3
