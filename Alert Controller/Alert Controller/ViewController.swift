@@ -106,8 +106,7 @@ class ViewController: UIViewController {
             TEXTFIELD.isSecureTextEntry = true
         })
         
-        alertController.view.backgroundColor = UIColor.blue
-        
+        alertController.view.backgroundColor = UIColor.blue   
         present(alertController, animated: true, completion: nil)
     }
     
